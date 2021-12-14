@@ -2,7 +2,7 @@
 using ITHS_CC_Labb2.Classes;
 
 
-OrderService orderService1 = new OrderService(
+OrderService orderService1 = new OrderServiceNormal(
     new MessageTool(new ProcessSpeed()
         ));
 
@@ -18,7 +18,7 @@ orderService1.ProcessOrder(normalOrder);
 
 Console.WriteLine(normalOrder);
 
-OrderService orderService2 = new OrderService(
+OrderService orderService2 = new OrderServiceQuick(
     new MessageTool(new ProcessSpeed()
         ));
 
@@ -34,7 +34,7 @@ orderService2.ProcessOrder(quickOrder);
 
 Console.WriteLine(quickOrder);
 
-OrderService orderService3 = new OrderService(
+OrderService orderService3 = new OrderServiceLightning(
     new MessageTool(new ProcessSpeed()
         ));
 
