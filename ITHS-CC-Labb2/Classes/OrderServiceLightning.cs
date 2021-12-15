@@ -15,9 +15,9 @@ namespace ITHS_CC_Labb2.Classes
 
         public override void ProcessOrder(IOrderModel order)
         {
-            bool s = _messageTool.MessageLightningSuccess(order);
+            bool isSuccess = _messageTool.MessageLightningSuccess(order);
 
-            if (!s)
+            if (!isSuccess)
             {
                 _messageTool.LogMessage("FAILED ORDER: Could not ship order with ID " + order.ID);
             }
